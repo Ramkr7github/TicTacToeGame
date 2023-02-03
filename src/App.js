@@ -23,12 +23,16 @@ function App() {
   }
 
   const checkIsWinner = () => {
+
+    //1st Horizontal row logic
     if (itemArray[0]=== itemArray[1] &&
       itemArray[0]=== itemArray[2]&&
       itemArray[0]!== "empty")
       {
        setWinMessage(`${itemArray[0]} wins`)
       }
+
+      //2nd Horizontal row logic
       else if(
         itemArray[3]!== "empty" &&
         itemArray[3]=== itemArray[4] &&
@@ -37,7 +41,8 @@ function App() {
         {
          setWinMessage(`${itemArray[3]} wins`)
         }
-
+ 
+        //3rd Horizontal row logic
         else if(
           itemArray[6]!== "empty" &&
           itemArray[6]=== itemArray[7] &&
@@ -46,6 +51,8 @@ function App() {
           {
            setWinMessage(`${itemArray[6]} wins`)
           }
+         
+           //1st Vertical row logic
 
           else if(
             itemArray[0]!== "empty" &&
@@ -55,6 +62,8 @@ function App() {
             {
              setWinMessage(`${itemArray[0]} wins`)
             }
+       
+             //2nd Vertical row logic
 
             else if(
               itemArray[1]!== "empty" &&
@@ -64,6 +73,8 @@ function App() {
               {
                setWinMessage(`${itemArray[1]} wins`)
               }
+              
+          //3rd Vertical row logic
 
               else if(
                 itemArray[2]!== "empty" &&
@@ -74,6 +85,8 @@ function App() {
                  setWinMessage(`${itemArray[2]} wins`)
                 }
 
+         //Horizonatal middle row win logic
+
                 else if(
                   itemArray[0]!== "empty" &&
                   itemArray[0]=== itemArray[4] &&
@@ -82,6 +95,8 @@ function App() {
                   {
                    setWinMessage(`${itemArray[0]} wins`)
                   }
+                  
+                  //vertical middle row win logic
 
                   else if(
                     itemArray[2]!== "empty" &&
@@ -92,6 +107,8 @@ function App() {
                      setWinMessage(`${itemArray[2]} wins`)
                     }
 
+                     //Digonally win login
+
                     else if(
                       itemArray[1]!== "empty" &&
                       itemArray[1]=== itemArray[5] &&
@@ -100,7 +117,7 @@ function App() {
                       {
                        setWinMessage(`${itemArray[1]} wins`)
                       }
-
+                //Digonally win login
                       else if(
                         itemArray[3]!== "empty" &&
                         itemArray[3]=== itemArray[5] &&
